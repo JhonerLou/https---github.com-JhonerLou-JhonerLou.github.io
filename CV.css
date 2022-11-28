@@ -1,0 +1,649 @@
+@font-face{
+    font-family: Manrope;
+    src: url(../Coding/SASS/manrope/Manrope-Regular.otf);
+}
+@font-face {
+    font-family: LEMONMILK;
+    src: url(../Coding/fonts/lemonmilk/LEMONMILK-Regular.otf);
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track{
+    background: black;
+    border-radius: 5px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: #fff5e4;
+    
+}
+.bubbly-button {
+    font-family: Manrope;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px #85e7ff;
+    
+  }
+  .bubbly-button:focus {
+    outline: 0;
+  }
+  .bubbly-button:before, .bubbly-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  .bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle,#ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  .bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #85e7ff 20%, transparent 20%), radial-gradient(circle, #85e7ff 20%, transparent 20%), radial-gradient(circle, transparent 10%,  15%, transparent 20%), radial-gradient(circle, #85e7ff 20%, transparent 20%), radial-gradient(circle, #85e7ff 20%, transparent 20%), radial-gradient(circle, #85e7ff  20%, transparent 20%), radial-gradient(circle, #85e7ff 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  .bubbly-button:active {
+    transform: scale(0.9);
+    background-color: transparent;
+    box-shadow: 0 2px 25px #85e7ff;
+    color: black;
+  }
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  
+  @keyframes topBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+  }
+  @keyframes bottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+      background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+  }
+  
+
+#text{
+    color: #9D84B7;
+}
+nav{
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+.container{
+    display: flex;
+}
+.logo{
+    font-family: Manrope;
+    font-weight: bold;
+    font-size: 19pt;
+    padding-left: 200px;
+    padding-top: 8px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    padding-left: 339px;
+}
+.menu li{
+    padding: 0 10px;
+    font-family: Manrope;
+    padding-bottom: 3px;
+    font-size: 12pt;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover{
+    border-bottom: 0.5px solid black;
+}
+header{
+    display: flex;
+    padding-top: 40px;
+}
+.text{
+    width: 40%;
+    margin-left: 140px;
+    border-top: 5px solid black
+    
+}
+
+.text h2{
+    font-family: Manrope;
+    font-size: 45pt;
+}
+
+.text p{
+    font-family: Manrope;
+    font-size: 16pt;
+    margin-bottom: 20px;
+    
+}
+.text button{
+    border-radius: 24px;
+    font-family: Manrope;
+    background-color: transparent;
+    color: black;
+    padding: 10px 50px;
+    font-size: 12pt;
+    margin-top: 30px;
+    
+}
+
+.text button a:hover{
+    color: black;
+    background-color: transparent;
+}
+
+
+.face{
+    width: 45%;
+    margin-left: 180px;
+    margin-top: 10px;
+    height: 100%;
+}
+.face img{
+    width: 90%;
+}
+.judul1{
+    width: 100%;
+    height: 700px;
+    background-color:   #2D3B3E;
+    display: flex;
+
+}
+.service{
+    width: 50%;
+    padding-left: 170px;
+    margin-top: 30px;
+
+}
+.service h2{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 40pt;
+    
+}
+.service p{
+    color: white;
+    font-family: Manrope;   
+    font-size: 12pt;
+    padding-bottom: 30px;
+}
+.service img{
+    width: 23%;
+    padding-top: 40px;
+}
+.work{
+    padding-top: 55px;
+    width: 50%;
+    
+}
+
+.textnya h2{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 30pt;
+}
+.textnya p{
+    font-size: 12pt;
+    font-family: Manrope;
+    color: white;
+}
+.spasinya{
+    width: 10%;
+}
+.photography h2{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 30pt;
+}
+.programmer h2{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 30pt;
+}
+.garis1{
+    border-bottom: 5px solid white;
+    width: 70%;
+}
+.garis3{
+    border-top: 5px solid white;
+    width: 70%;
+}
+.garis4{
+    border-top: 5px solid white;
+    width: 70%;
+}
+.web-design, .photography, .programmer{
+    display: flex;
+    width: 100%;
+}
+.web-design img{
+    width: 55%;
+    padding-top: 40px;
+    
+}
+.gambarnya{
+    margin-left: 77px;
+}
+.photography img{
+    width: 7%;
+    padding-left: 28px;
+}
+.programmer img{
+    width: 7%;
+    padding-left: 19px;
+}
+.containernya{
+    margin: 20px 100px;
+    
+}
+.selected-work{
+    height: 400px;
+   
+    padding-top: 80px;
+}
+.garis-lagi{
+    border-bottom: 8px solid black;
+    height: 10%;
+    width: 9%;
+    margin-left: 0.5%;
+}
+.selected-work h2{
+    font-family: LEMONMILK;
+    font-size: 40pt;
+}
+.selected-work p{
+    font-family: Manrope;
+    padding-left: 3px;
+}
+.portofolio{
+    margin-top: 100px;
+    margin-left: 140px;
+}
+
+.porto1{
+    height: 60vh;
+    border: 2px solid black;
+    width: 85%;
+    background-color: #2D3B3E;
+    display: flex;
+}
+.porto1 img{
+    width: 65%;
+}
+.porto1-text{
+   padding: 32px 44px;
+    
+}
+.porto1-text h3{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 1.8em;
+}
+.porto1-text p{
+    font-family: Manrope;
+    color: white;
+}
+.porto1-text button{
+    padding: 10px 40px;
+    font-family: Manrope;
+    border-radius: 24px;
+    margin-left: 65px;
+    margin-top: 10px;
+    font-size: 11pt;
+}
+.porto1-text button:hover{
+    background-color: transparent;
+    color: white;
+}
+.photo{
+    width: 63%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.photo1{
+    width: 63%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.porto2{
+    height: 60vh;
+    border: 2px solid black;
+    width: 85%;
+    background-color: #2D3B3E;
+    display: flex;
+    margin-top: 150px;
+}
+.porto2 img{
+    width: 65%;
+}
+.porto2-text{
+   padding: 44px;
+   text-align: center; 
+}
+.porto2-text h3{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 1.8em;
+}
+.porto2-text p{
+    font-family: Manrope;
+    color: white;
+}
+.porto2-text button{
+    padding: 10px 40px;
+    font-family: Manrope;
+    border-radius: 24px;
+    margin-left: 11px;
+    margin-top: 35px;
+    font-size: 11pt;
+}
+.porto2-text button:hover{
+    background-color: transparent;
+    color: white;
+}
+.photo2{
+    width: 63%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.porto3{
+    height: 60vh;
+    border: 2px solid black;
+    width: 85%;
+    background-color: #2D3B3E;
+    display: flex;
+    margin-top: 150px;
+}
+.porto3 img{
+    width: 65%;
+}
+.porto3-text{
+   padding: 40px;
+   text-align: left; 
+}
+.porto3-text h3{
+    font-family: LEMONMILK;
+    color: white;
+    font-size: 1.8em;
+}
+.porto3-text p{
+    font-family: Manrope;
+    color: white;
+}
+.porto3-text button{
+    padding: 10px 40px;
+    font-family: Manrope;
+    border-radius: 24px;
+    margin-left: 70px;
+    margin-top: 23px;
+    font-size: 11pt;
+}
+.porto3-text button:hover{
+    background-color: transparent;
+    color: white;
+}
+.porto4{
+    height: 85vh;
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 85%;
+    background-color: transparent;
+    display: flex;
+    margin-top: 150px;
+}
+.photo3 img{
+    height: 35vh;
+    width: 75%;
+    margin-left: 60px;
+}
+.porto4-text{
+    padding: 169px 84px;
+    text-align: center;
+    width: 40%;
+ }
+.porto4-text h3{
+    font-family: LEMONMILK;
+    color: black;
+    font-size: 1.8em;
+}
+.porto4-text p{ 
+    font-family: Manrope;
+    color: black;
+    font-size: 12pt;
+}
+.porto4-text button{
+    padding: 10px 40px;
+    font-family: Manrope;
+    background-color: transparent;
+    border-radius: 24px;
+    margin-left: 5px;
+    margin-top: 23px;
+    font-size: 11pt;
+}
+.porto4-text button:hover{
+    background-color: #2D3B3E;
+    color: white;
+}
+.photo3 .menunya1{
+    margin-top: 30px;
+}
+.photo3 .menunya2{
+    margin-top: 40px;
+}
+.judul2{
+    width: 100%;
+    height: 95vh;
+    background-color:   #2D3B3E;
+    display: flex;
+    margin-top: 150px;
+}
+.garis-test{
+    border-top: 5px solid white;
+    width: 23%;
+}
+.text-test{
+    margin-left: 100px;
+    width: 46%;
+    margin-top: 45px;
+}
+.text-test h3{
+    font-family: LEMONMILK;
+    font-size: 36pt;
+    color: white;
+}
+.text-test p{
+    font-size: 14pt;
+    font-family: Manrope;
+    color: white;
+}
+.text-test img{
+    height: 42vh;
+    margin-top: 40px;
+    
+}
+.text-test1{
+    margin-top: 175px;
+}
+.text-test1 img{
+    height: 10vh;
+}
+.text-test1 p{
+    font-size: 22pt;
+    font-family: Manrope;
+    color:white;
+}
+.tombols{
+    display: flex;
+}
+.tombols p{
+    font-size: 14pt;
+} 
+.tombols img{
+    height: 8vh;
+    margin-top: 18px;
+    margin-left: 180px;
+}
+.selected-work1{
+    height: 400px;
+   
+    padding-top: 80px;
+}
+.garis-lagi1{
+    border-bottom: 8px solid black;
+    height: 10%;
+    width: 6%;
+    margin-left: 0.5%;
+}
+.selected-work1 h2{
+    font-family: LEMONMILK;
+    font-size: 44pt;
+}
+.selected-work1 p{
+    font-family: Manrope;
+    padding-left: 3px;
+    font-size: 12pt;
+}
+.selected-work2{
+    display: flex;
+    
+}
+.tulisan-lagi1{
+    font-family: Manrope;
+    font-size: 26pt;
+    width: 50%;
+}
+.gambar-lagi1{
+    width: 50%;
+    margin-top: 46px;
+}
+.gambar-lagi1 img{
+    height: 41vh;
+    
+}
+.judul3{
+    width: 100%;
+    height: 100vh;
+    background-color:   #2D3B3E;
+    display: flex;
+    margin-top: 150px;
+}
+.garis-test3{
+    border-top: 5px solid white;
+    width: 23%;
+}
+.text-test3{
+    margin-left: 100px;
+    width: 46%;
+    margin-top: 40px;
+}
+.text-test3 h3{
+    font-family: LEMONMILK;
+    font-size: 39pt;
+    color: white;
+}
+.text-test3 p{
+    font-size: 12pt;
+    font-family: Manrope;
+    color: white;
+}
+.text-test3 img{
+    height: 42vh;
+    margin-top: 100px;
+}
+.text-test4 {
+    width: 50%;
+    margin-top: 169px;
+    margin-left: 220px;
+}
+.text-test4 h3{
+    font-family: Manrope;
+    font-size: 20pt;
+    color: white;
+}
+.text-test4 p{
+    font-family: Manrope;
+    font-size: 17pt;
+    color: white;
+    font-weight: lighter;
+}
+.text-test4 img{
+    height: 8vh;
+    margin-top: 28px;
+    margin-left: 177px;
+}
+.contactku{
+    display: flex;
+}
+
+.contact-1{
+    height: 60vh;
+}
+.contact-2{
+    height: 60vh;
+    margin-left: 150px;
+}
+
+
+
+
